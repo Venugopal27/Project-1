@@ -1,0 +1,17 @@
+{
+  "name": "classmates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"node main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

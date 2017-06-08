@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header col-md-4">
+      <a class="navbar-brand" href="#" style="padding-left: 250px;">Amrita Social Network</a>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="navbar-header col-md-4">
+      <a class="navbar-brand" href="#" style="padding-left: 250px;">My Profile</a>
+    </div>
+  </div>
+</nav>
+<div class="row">
+<div class="col-md-2"></div>
+	<div class="col-md-4"><h1> My Classmates</h1></div>
+</div>
+
+<% for(var i=0;i<result1.length;i+=4) {%>
+<div class="row">
+ <%if (i<result1.length) { %>
+ <div class="col-md-2"></div>
+	<div class="col-md-2">
+      <figure>
+        <img src="http://placehold.it/100?text=500x250" class="img-thumbnail" height="126" width="253">
+        <h3> <%= result1[i].Name%></h3>
+        <h5>E-mail: <%= result1[i].Email %></h5>
+        <h5>Username: <%=result1[i].Username%></h5>
+        <a href="/Profilename<%= i%>" class="btn btn-default" role="button">Go to Profile</a>
+      </figure>
+    </div>
+  <% } %>
+
+  <%if (i+1<result1.length) { %>
+	<div class="col-md-2">
+      <figure>
+        <img src="http://placehold.it/100?text=500x250" class="img-thumbnail" height="126" width="253">
+        <h3> <%= result1[i+1].Name%></h3>
+        <h5>E-mail: <%= result1[i+1].Email %></h5>
+        <h5>Username: <%=result1[i+1].Username %></h5>
+        <a href="/Profilename<%= i+1%>" class="btn btn-default" role="button">Go to Profile</a>
+      </figure>
+    </div>
+   <% } %>
+
+   <%if (i+2<result1.length) { %>
+	<div class="col-md-2">
+      <figure>
+        <img src="http://placehold.it/100?text=500x250" class="img-thumbnail" height="126" width="253">
+        <h3> <%= result1[i+2].Name %></h3>
+        <h5>E-mail: <%= result1[i+2].Email %></h5>
+        <h5>Username: <%=result1[i+2].Username %></h5>
+        <a href="/Profilename<%= i+2%>" class="btn btn-default" role="button">Go to Profile</a>
+      </figure>
+    </div>
+    <% } %>
+
+    <%if (i+3<result1.length) { %>
+	<div class="col-md-2">
+      <figure>
+        <img src="http://placehold.it/100?text=500x250" class="img-thumbnail" height="126" width="253">
+        <h3> <%= result1[i+3].Name %></h3>
+        <h5>E-mail: <%= result1[i+3].Email %></h5>
+        <h5>Username: <%=result1[i+3].Username %></h5>
+        <a href="/Profilename<%= i+3%>" class="btn btn-default" role="button">Go to Profile</a>
+      </figure>
+    </div>
+    <h1></h1>
+    <% } %>
+</div>
+<% } %>
+
+</body>
+</html>
+
+
+
