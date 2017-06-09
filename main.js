@@ -39,10 +39,13 @@ app.get('/formsubmit',function(req,res) {
 	})
 	// body...
 })
+var e;
+var p;
+var u;
 
 app.get('/getinfo',function(req,res) {
-	var e=req.query.Email1;
-	var p=req.query.Password1;
+	 e=req.query.Email1;
+      p=req.query.Password1;
 	db.find({'Email':e,'Password':p},function(err,result) {
 		if(result.length>0)
 		{
@@ -58,6 +61,25 @@ app.get('/getinfo',function(req,res) {
 	// body...
 })
 
+app.get('/MyPro',function (req,res) {
+	db.find({'Email':e},function (err,result6) {
+		console.log(result6)
+		if(result6.length>0)
+		{
+			console.log(e)
+	        db.find({'Email':e},function (err,result8) {
+	        	console.log(result8)
+			res.render('MyProfile3',{Your:result8})
+		    })
+		}
+		else
+		{
+			console.log('wrong')
+		}
+		// body...
+	})
+	// body...
+})
 app.get('/Profilename:num',function(req,res) {
 	var t=req.params.num
    
